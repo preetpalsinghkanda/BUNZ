@@ -1,13 +1,40 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>bunz</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="https://www.cravburgers.shop/favicon.ico?favicon.0zm.9b8gmi8mf.ico" sizes="48x48"
+    type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Modak&family=Mouse+Memoirs&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUNZZZ</title>
+</head>
+
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script>
+    const titles = [
+
+      "BUNZ | Grilling",
+      "BUNZ | Sizzling",
+      "BUNZ | Flipping",
+      "BUNZ | Serving",
+      "BUNZ | Enjoy",
+    ]
+
+    let i = 0
+
+    setInterval(() => {
+      document.title = titles[i]
+      i = (i + 1) % titles.length
+    }, [1000])
+
+  </script>
+
+</body>
+
 </html>
