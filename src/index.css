@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+
+@theme {
+  --font-modak: "Modak", sans-serif;
+  --font-mouse: "Mouse Memoirs", sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
