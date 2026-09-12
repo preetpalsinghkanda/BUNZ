@@ -7,50 +7,51 @@ const NavBar = () => {
   const handleHoverIn = () => {
     const t1 = gsap.timeline();
 
-    t1.to(".burger_text", {
-      y: -20,
+    t1.to(".burger_text_one", {
+      y: -12,
       duration: 0.1,
       opacity: 0,
     });
 
-    t1.set(".burger_text", {
-      y: 70,
-    });
-
-    t1.to(".burger_text", {
-      y: 0,
-      duration: 0.2,
+    t1.to(".burger_text_two", {
+      top: 4,
       opacity: 1,
+      duration: 0.1,
     });
 
-    gsap.to(".burger_btn", {
-      backgroundColor: "black",
-      duration: 0.5,
-    });
+    t1.to(
+      ".burger_btn",
+      {
+        backgroundColor: "black",
+        duration: 0,
+      },
+      "<",
+    );
   };
 
   const handleHoverOut = () => {
     const t2 = gsap.timeline();
-    t2.to(".burger_text", {
-      duration: 0.2,
+
+    t2.to(".burger_text_two", {
+      top: 12,
       opacity: 0,
-      y: 70,
+      duration: 0.1,
     });
 
-    t2.to(".burger_text", {
-      y: -70,
-    });
-
-    t2.to(".burger_text", {
+    t2.to(".burger_text_one", {
       y: 0,
       duration: 0.1,
       opacity: 1,
     });
 
-    gsap.to(".burger_btn", {
-      backgroundColor: "#F91814",
-      duration: 0.5,
-    });
+    t2.to(
+      ".burger_btn",
+      {
+        backgroundColor: "#F91814",
+        duration: 0,
+      },
+      "<",
+    );
   };
 
   return (
@@ -59,16 +60,16 @@ const NavBar = () => {
         BUNZ
       </div>
       <div className="flex gap-4 font-mouse items-center">
-        <span
-        
+        <a
           onMouseLeave={handleHoverOut}
           onMouseEnter={handleHoverIn}
-          className="burger_btn flex items-center hover:scale-105 justify-center text-[24px] px-5 py-1 font-light text-[#F5E3CD]  bg-[#F91814] rounded-full "
+          className="burger_btn flex relative items-center hover:scale-107 duration-300 justify-center text-[24px] px-5 py-1 font-light text-[#F5E3CD]  bg-[#F91814] rounded-full "
         >
-          <a className="burger_text" href="">
+          <span className="burger_text_one">burgers</span>
+          <span className="absolute flex items-center burger_text_two opacity-0  top-10 ">
             burgers
-          </a>
-        </span>
+          </span>
+        </a>
         <div className=" flex items-center justify-center gap-1  border-2 border-black/20 rounded-full px-5 py-1">
           <span className="text-[24px]">menu</span>
           <FontAwesomeIcon className="text-[20px]" icon={faBarsStaggered} />
