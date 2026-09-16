@@ -63,30 +63,29 @@ const NavBar = () => {
       duration: 0.1,
     });
 
-    t1.to(".menu_text_two",{
+    t1.to(".menu_text_two", {
       top: 0,
-      fontSize : "25px",
-      duration : 0.1,
-      opacity : 1,
-    })
+      fontSize: "25px",
+      duration: 0.1,
+      opacity: 1,
+    });
   };
 
-  const menuHandleHoverOut =()=>{
-    const t2 = gsap.timeline()
+  const menuHandleHoverOut = () => {
+    const t2 = gsap.timeline();
 
-    t2.to(".menu_text_two",{
-      top : 12,
-      duration :  0.1 ,
-      opacity  : 0,
-    })
+    t2.to(".menu_text_two", {
+      top: 12,
+      duration: 0.1,
+      opacity: 0,
+    });
 
-    t2.to(".menu_text_one",{
-      opacity : 1,
-      duration : 0.1,
-      y: 0
-    })
-
-  }
+    t2.to(".menu_text_one", {
+      opacity: 1,
+      duration: 0.1,
+      y: 0,
+    });
+  };
 
   return (
     <div className="fixed px-12 pt-3  border items-center  bg-[#F5E3CD] uppercase flex left-0 w-full justify-between">
@@ -105,13 +104,15 @@ const NavBar = () => {
           </span>
         </a>
         <div
-        onMouseLeave={menuHandleHoverOut}
+          onMouseLeave={menuHandleHoverOut}
           onMouseEnter={menuHandleHoverIn}
           className="hover:scale-107 duration-280 hover:border-black flex items-center justify-center gap-1  border-2 border-black/20 rounded-full px-5 py-1"
         >
           <div className="text-[24px] flex flex-col relative">
             <span className="menu_text_one">menu</span>
-            <span className="absolute opacity-0 menu_text_two top-10 ">menu</span>
+            <span className="absolute opacity-0 menu_text_two top-10 ">
+              menu
+            </span>
           </div>
           <FontAwesomeIcon className="text-[20px]" icon={faBarsStaggered} />
         </div>
