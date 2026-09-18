@@ -1,14 +1,14 @@
-import React from 'react'
-import NavBar from './components/NavBar';
-import Cursor from './components/Cursor'
+import React from "react";
+import NavBar from "./components/NavBar";
+import Cursor from "./components/Cursor";
 
 const App = () => {
   return (
     <div className="main">
-      <Cursor/>
-      <NavBar/>
+      <Cursor />
+      <NavBar />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
